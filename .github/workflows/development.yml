@@ -85,7 +85,7 @@ jobs:
 
       - name: Get current tag
         id: build_version
-        run: exho "current_tage=${GITHUB_REF#/refs/*/}" >> $GITHUB_OUTPUT
+        run: echo "current_tage=${GITHUB_REF#/refs/*/}" >> $GITHUB_OUTPUT
 
       - name: Install Node ${{ matrix.node-version }}
         uses: actions/setup-node@v2
